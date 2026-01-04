@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(4, 77, 80);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a.nav-button-wrapper {
+            padding: 8px 16px;
+            background-color: yellow;
+            color: royalblue;
+            border-radius: 100px;
+            text-decoration: none;
+        }
+
+        .button-primary {
+            background-color: yellow;
+            color: royalblue;
+            text-align: center;
+            border-radius: 100px;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .button-wrapper {
+            grid-column-gap: 12px;
+            grid-row-gap: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+
+        .button-text {
+            position: relative;
+            transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+        }
+        a:hover .button-text {
+            transform: translate3d(0px, -100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;
+        }
+
+        .button-label.hover {
+            position: absolute;
+            opacity: 1;
+            
+        }
+
+        
+        .button-icon {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .arrow-up-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 19.2px;
+            height: 19.2px;
+            transform: rotate(-45deg);
+            transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+            transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-45deg) skew(0deg, 0deg); transform-style: preserve-3d;
+            
+        }
+
+        a:hover .arrow-up-icon {
+            transform: rotate(-45deg);
+            transform: translate3d(144%, -138%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-45deg) skew(0deg, 0deg); transform-style: preserve-3d;
+            
+        }
+
+        .arrow-up-icon.hover {
+            opacity: 1;
+            position: absolute;
+            bottom: -140%;
+            left: -140%;
+            transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <a href="#" class="nav-button-wrapper">
+        <div class="button-primary">
+            <div class="button-wrapper">
+                <div class="button-text">
+                    <div class="button-label">
+                        Buy Template
+                    </div>
+                    <div class="button-label hover">
+                        Buy Template
+                    </div>
+                </div>
+
+                <div class="button-icon">
+                    <div class="arrow-up-icon">
+                        <svg width="25" height="25" aria-hidden="true" fill="currentColor" role="img"
+                            viewBox="0 0 20 21" xmlns="http://www.w3.org/2000/svg">
+                            <title>Arrow Right</title>
+                            <polygon
+                                points="16.172 9 10.101 2.929 11.515 1.515 20 10 19.293 10.707 11.515 18.485 10.101 17.071 16.172 11 0 11 0 9">
+                            </polygon>
+                        </svg>
+                    </div>
+                    <div class="arrow-up-icon hover">
+                        <svg width="25" height="25" aria-hidden="true" fill="currentColor" role="img"
+                            viewBox="0 0 20 21" xmlns="http://www.w3.org/2000/svg">
+                            <title>Arrow Right</title>
+                            <polygon
+                                points="16.172 9 10.101 2.929 11.515 1.515 20 10 19.293 10.707 11.515 18.485 10.101 17.071 16.172 11 0 11 0 9">
+                            </polygon>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</body>
+
+</html>

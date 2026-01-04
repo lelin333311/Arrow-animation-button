@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(4, 77, 80);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .button-arrow {
+            padding: 15px 20px;
+            border-radius: 100px;
+            background-color: aquamarine;
+            overflow: hidden;
+            position: relative;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .arrow.hover svg {
+            position: absolute;
+            top: 37px;
+            left: 5px;
+           transition: all 0.3s ease-in-out;
+        }
+
+        .button-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            gap: 10px;
+            padding: 10px 15px;
+            border-radius: 100px;
+            background-color: aquamarine;
+            overflow: hidden;
+            height: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button-arrow:hover .button-main .template {
+            transform: translateY(-40px);
+            transition: all 0.3s ease;
+        }
+
+        .template.hover {
+            transform: translateY(0px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button-arrow:hover .button-main .template.hover {
+            transform: translateY(-17px);
+        }
+        /* .button-last {
+            height: 18px;
+        } */
+
+        .arrow svg {
+            transform: rotate(-45deg);
+        }
+
+        .button-arrow:hover .button-main .button-arrow .arrow {
+            transform: translate(18px, -14px);
+            transition: all 0.3s ease-in-out;
+            /* transform: translate(0, 0) rotate(-45deg); */
+            /* smooth animation */
+            transition: .45s cubic-bezier(.77, 0, .175, 1);
+        }
+
+        .button-arrow:hover .button-main .button-arrow.hover {
+            transform: translate(18px, -14px);
+            transition: .45s cubic-bezier(.77, 0, .175, 1);
+        }
+
+        .arrow.hover svg {
+            transform: rotate(-45deg);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="button-arrow">
+        <div class="button-main">
+            <div class="button-last">
+                <div class="template">Buy Template</div>
+                <div class="template hover">Buy Template</div>
+            </div>
+
+            <div class="button-arrow">
+
+                <div class="arrow">
+                    <svg width="10" height="10" aria-hidden="true" fill="currentColor" role="img" viewBox="0 0 20 21"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>Arrow Right</title>
+                        <polygon
+                            points="16.172 9 10.101 2.929 11.515 1.515 20 10 19.293 10.707 11.515 18.485 10.101 17.071 16.172 11 0 11 0 9">
+                        </polygon>
+                    </svg>
+                </div>
+
+                <div class="arrow hover">
+                    <svg width="10" height="10" aria-hidden="true" fill="currentColor" role="img" viewBox="0 0 20 21"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>Arrow Right</title>
+                        <polygon
+                            points="16.172 9 10.101 2.929 11.515 1.515 20 10 19.293 10.707 11.515 18.485 10.101 17.071 16.172 11 0 11 0 9">
+                        </polygon>
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+    </a>
+</body>
+
+</html>
